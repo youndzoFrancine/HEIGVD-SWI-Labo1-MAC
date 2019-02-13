@@ -2,7 +2,7 @@
 
 ## Laboratoire 802.11 MAC
 
-__A faire en équipes de deux personnes__
+__A faire _impérativement_ en équipes de deux personnes__
 
 ### Pour cette partie pratique, vous devez être capable de :
 
@@ -70,7 +70,7 @@ La détection de client s'utilise également à des fins de recherche de marketi
 
 __ATTENTION__ : Le suivi de clients iPhone n'est plus possible que dans certaines conditions depuis la version 8 d'iOS.
  
-* Développer un script en Python/Scapy capable de capturer les trames nécessaires pour la détection de clients 802.11. Le script se lance en ligne de commandes avec comme argument une adresse MAC d'un certain client. Le script surveille ensuite les messages capturés et imprime une confirmation quand l'adresse est détectée.
+a) Développer un script en Python/Scapy capable de capturer les trames nécessaires pour la détection de clients 802.11. Le script se lance en ligne de commandes avec comme argument une adresse MAC d'un certain client. Le script surveille ensuite les messages capturés et imprime une confirmation quand l'adresse est détectée.
 
 __Question__ : quel type de trames sont nécessaires pour détecter les clients de manière passive ?
 
