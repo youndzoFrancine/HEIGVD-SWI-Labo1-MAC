@@ -2,7 +2,7 @@
 
 [Échéance](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#échéance)
 
-[Quelques pistes importantes](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#)
+[Quelques pistes importantes](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#quelques-pistes-importantes-avant-de-commencer-revenez-les-voir-vous-en-aurez-besoin-)
 
 [Travail à réaliser](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#travail-à-réaliser)
 
