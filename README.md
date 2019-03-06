@@ -1,3 +1,6 @@
+[Livrables](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#livrables)
+[Échéance](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#echeance)
+
 # Sécurité des réseaux sans fil
 
 ## Laboratoire 802.11 MAC
@@ -19,7 +22,17 @@ et de garder la fenêtre d'airodump ouverte en permanence pendant que vos script
 
 Pour les interfaces Alfa AWUS036ACH (interfaces noires), __il faut activer la compatibilité USB 3.0 sur votre VM__. Pour toute autre interface, il faudra utiliser USB 2.0 sur votre VM. __Les ports USB configurés en 1.0 ou 1.1 ne sont pas assez rapides pour sniffer du WiFi__.
 
-Il faudra faire les manipulations suivantes pour configurer les interfaces Alfa AWUS036ACH en mode monitor (pour les autres interfaces, se renseigner sur Internet) :
+Pour passer une interface __Alfa AWUS036H, AWUS036NH et très probablement l'interface de votre propre laptop__ (si vous travaillez en natif, donc, pas de VM), il faudra utiliser la commande suivante :
+
+```bash
+sudo airmon-ng start wlan0
+```
+
+__ATTENTION :__ il faut vérifier que votre interface s'appelle bien wlan0 en utilisant la commande ```ifconfig```. Si ce n'est pas le cas, il faudra donc utiliser le nom correcte avec la commande ```airmon-ng```.
+
+Cette commande devrait générer une nouvelle interface ```wlan0mon``` qui fonctionne en mode monitor.
+
+Si vous utilisez les interfaces Alfa __AWUS036ACH__, il faudra faire les manipulations suivantes pour configurer les en mode monitor. __ATTENTION, uniquement si vous utilisez les interfaces AWUS036ACH__ :
 
 
 ### Installer le driver (disponible sur Kali. Pour d'autres distributions, il faudra probablement le compiler à partir des sources) :
@@ -106,4 +119,4 @@ Un clone du repo original contenant :
 
 ## Échéance
 
-Le 13 mars 2019 à 18h00
+Le 20 mars 2019 à 18h00
