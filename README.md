@@ -108,7 +108,7 @@ Ainsi, à chaque fois que votre client imprime des résultats, il affiche quelqu
 
 ## Livrables
 
-Un fork du repo original contenant :
+Un fork du repo original . Puis, un Pull Request contenant :
 
 - Script de détection de clients 802.11 __abondamment commenté/documenté__
 
