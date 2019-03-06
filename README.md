@@ -13,7 +13,7 @@ __A faire en équipes de deux personnes__
 *	Détecter si un certain client WiFi se trouve à proximité
 *	Obtenir une liste des SSIDs annoncés par les clients WiFi présents
 
-Vous allez devoir faire des recherches sur internet pour apprendre à utiliser Scapy et la suite aircrack pour vos manipulations. __Il est fortement conseillé d'employer une distribution Kali__ (on ne pourra pas assurer le support avec d'autres distributions). Si vous utilisez une VM, il vous faudra une interface WiFi usb, disponible sur demande.
+Vous allez devoir faire des recherches sur internet pour apprendre à utiliser Scapy et la suite aircrack pour vos manipulations. __Il est fortement conseillé d'employer une distribution Kali__ (on ne pourra pas assurer le support avec d'autres distributions). __Si vous utilisez une VM, il vous faudra une interface WiFi usb, disponible sur demande__.
 
 __ATTENTION :__ Pour vos manipulations, il pourrait être important de bien fixer le canal lors de vos captures et vos injections. Si vous en avez besoin, la méthode la plus sure est d'utiliser l'option :
 
@@ -23,7 +23,7 @@ et de garder la fenêtre d'airodump ouverte en permanence pendant que vos script
 
 Pour les interfaces Alfa AWUS036ACH (interfaces noires), __il faut activer la compatibilité USB 3.0 sur votre VM__. Pour toute autre interface, il faudra utiliser USB 2.0 sur votre VM. __Les ports USB configurés en 1.0 ou 1.1 ne sont pas assez rapides pour sniffer du WiFi__.
 
-Pour passer une interface __Alfa AWUS036H, AWUS036NH et très probablement l'interface de votre propre laptop__ (si vous travaillez en natif, donc, pas de VM) en mode monitor, il faudra utiliser la commande suivante (vérifiez avec ```ifconfig```que votre interface s'appelle bien ```wlan0```. Sinon, utilisez le nom correct dans la commande):
+Pour passer une interface __Alfa AWUS036H, AWUS036NH et très probablement l'interface de votre propre laptop__ en mode monitor, il faudra utiliser la commande suivante (vérifiez avec ```ifconfig```que votre interface s'appelle bien ```wlan0```. Sinon, utilisez le nom correct dans la commande):
 
 ```bash
 sudo airmon-ng start wlan0
@@ -104,13 +104,13 @@ Ainsi, à chaque fois que votre client imprime des résultats, il affiche quelqu
 
 ## Livrables
 
-Un clone du repo original contenant :
+Un fork du repo original contenant :
 
 - Script de détection de clients 802.11 __abondamment commenté/documenté__
 
 - Script de détection et affichage de SSID __abondamment commenté/documenté__
 
--	Réponses aux éventuelles questions posées dans la donnée dans votre ```README.md```
+-	Réponses aux éventuelles questions posées dans la donnée. Vous répondez aux questions dans votre ```README.md```
 
 -	Envoyer le hash du commit et votre username GitHub par email au professeur et à l'assistant
 
