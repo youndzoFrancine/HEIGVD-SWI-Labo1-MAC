@@ -1,4 +1,5 @@
 [Livrables](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#livrables)
+
 [Échéance](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#echeance)
 
 # Sécurité des réseaux sans fil
@@ -22,18 +23,15 @@ et de garder la fenêtre d'airodump ouverte en permanence pendant que vos script
 
 Pour les interfaces Alfa AWUS036ACH (interfaces noires), __il faut activer la compatibilité USB 3.0 sur votre VM__. Pour toute autre interface, il faudra utiliser USB 2.0 sur votre VM. __Les ports USB configurés en 1.0 ou 1.1 ne sont pas assez rapides pour sniffer du WiFi__.
 
-Pour passer une interface __Alfa AWUS036H, AWUS036NH et très probablement l'interface de votre propre laptop__ (si vous travaillez en natif, donc, pas de VM), il faudra utiliser la commande suivante :
+Pour passer une interface __Alfa AWUS036H, AWUS036NH et très probablement l'interface de votre propre laptop__ (si vous travaillez en natif, donc, pas de VM) en mode monitor, il faudra utiliser la commande suivante (vérifiez avec ```ifconfig```que votre interface s'appelle bien ```wlan0```. Sinon, utilisez le nom correct dans la commande):
 
 ```bash
 sudo airmon-ng start wlan0
 ```
 
-__ATTENTION :__ il faut vérifier que votre interface s'appelle bien wlan0 en utilisant la commande ```ifconfig```. Si ce n'est pas le cas, il faudra donc utiliser le nom correcte avec la commande ```airmon-ng```.
+Vous retrouverez ensuite une nouvelle interface ```wlan0mon``` qui fonctionne en mode monitor.
 
-Cette commande devrait générer une nouvelle interface ```wlan0mon``` qui fonctionne en mode monitor.
-
-Si vous utilisez les interfaces Alfa __AWUS036ACH__, il faudra faire les manipulations suivantes pour configurer les en mode monitor. __ATTENTION, uniquement si vous utilisez les interfaces AWUS036ACH__ :
-
+Si vous utilisez les interfaces Alfa __AWUS036ACH__ (interfaces noires), il faudra faire les manipulations suivantes pour les configurer en mode monitor. __ATTENTION, utilisez les commandes suivantes uniquement si vous utilisez les interfaces AWUS036ACH__ :
 
 ### Installer le driver (disponible sur Kali. Pour d'autres distributions, il faudra probablement le compiler à partir des sources) :
 
@@ -64,7 +62,7 @@ make
 sudo make install
 ```
 
-__Quelques pistes importantes avant de commencer (revenez les voir... vous en aurez besoin) :__
+##Quelques pistes importantes avant de commencer (revenez les voir... vous en aurez besoin) :
 
 - Si vous devez capturer et injecter du trafic, il faudra configurer votre interface 802.11 en mode monitor.
 - Python a un mode interactif très utile pour le développement. Il suffit de l'invoquer avec la commande ```python```. Ensuite, vous pouvez importer Scapy, rc4 et autres et utiliser les commandes directement dans la console (voir script fourni pour plus d'information sur l'importation de modules). En fait, vous pouvez même exécuter tout le script fourni en mode interactif !
