@@ -2,6 +2,10 @@
 
 [Échéance](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#échéance)
 
+[Quelques pistes importantes](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#)
+
+[Travail à réaliser](https://github.com/arubinst/HEIGVD-SWI-Labo1-MAC#travail-à-réaliser)
+
 # Sécurité des réseaux sans fil
 
 ## Laboratoire 802.11 MAC
@@ -62,7 +66,7 @@ make
 sudo make install
 ```
 
-##Quelques pistes importantes avant de commencer (revenez les voir... vous en aurez besoin) :
+## Quelques pistes importantes avant de commencer (revenez les voir... vous en aurez besoin) :
 
 - Si vous devez capturer et injecter du trafic, il faudra configurer votre interface 802.11 en mode monitor.
 - Python a un mode interactif très utile pour le développement. Il suffit de l'invoquer avec la commande ```python```. Ensuite, vous pouvez importer Scapy, rc4 et autres et utiliser les commandes directement dans la console (voir script fourni pour plus d'information sur l'importation de modules). En fait, vous pouvez même exécuter tout le script fourni en mode interactif !
