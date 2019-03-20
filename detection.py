@@ -21,19 +21,19 @@ listClients=[] #liste des clients sniffés
 listClientSsid=[] # liste des differents ssid des clients
 
 
-trameManagement = (0,2,4)
+trameManager = (0,2,4)
 
 def sniffing(packet)
 	if len(sys.argv) != 2 #si le user à passer l'argument
 		print" missing argument "
 		sys.exit(1)
 	if packet.haslayer(Dot11): # verifie si c'est un paquet wifi
-		if packet.type == 0 and subtype in trameManagement:
+		if packet.type == 0 and subtype in trameManager:
 			if packet.addr2 not in listClients:
 				print packet.addr2
 				listClients.append(packet.addr2) # ajout du client dans la liste s'il n'est pas present
 			if sys.argv[1] in listClients:
 				print "client found"
 				sys.exit(1)
-sniff(iface=interface, prn=sniffing)
+sniff(iface=interface, prn=sniffing) #sniff du paquet
 
