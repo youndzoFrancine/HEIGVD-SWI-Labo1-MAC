@@ -118,6 +118,12 @@ Un fork du repo original . Puis, un Pull Request contenant :
 
 -	Envoyer le hash du commit et votre username GitHub par email au professeur et à l'assistant
 
+#Reponses au questions
+
+1. les trames probes requests sont neccessaires pour  detecter les client de manière passive.
+2. parce que depuis iOS 8, la puce Wi-Fi n’affiche pas toujours la même adresse MAC lorsque le téléphone se met en recherche d’un réseau sans-fil.l'adresse MAC est randomisée.
+
+##NB: Pour lancer nos scripts de detection il faudrait lancer lexecutable + le paquet en 	question
 
 ## Échéance
 

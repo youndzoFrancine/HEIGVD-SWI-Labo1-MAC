@@ -24,7 +24,7 @@ import requests
 import threading
 
 
-interface = "wlan0"
+interface = "wlan0mon"
 
 dictionary= dict()
 vendor=""
@@ -45,10 +45,10 @@ def sniffing(packetToSniff):
         if packetToSniff.type == 0 and packetToSniff.subtype in trameManager:
 # on enregistre  l'adresse mac source si elle n'est pas encore present dans la liste
 # Pour chaque cle inséré dans le dictionnaire alloue une liste devant contenir la liste des ssid           
-           if packetToSniff.addr2 not in dictionnary.keys():
-              dictionnary[packetToSniff.addr2] = ssidtab
-           if paquetToSniff.info not in dictionnary[packetToSniff.addr2]:
-# Ce test permet de filtre les ssid vide  et de ne stocker que ceux qui ne sont pas vide 
+           if packetToSniff.addr2 not in dictionary.keys():
+              dictionary[packetToSniff.addr2] = ssidtab
+           if packetToSniff.info not in dictionary[packetToSniff.addr2]:
+# Ce test permet de filtre les ssid vide  et de stocker uniquement que ceux qui ne sont pas vide 
               if packetToSniff.info:
                 dictionary[packetToSniff.addr2].append(packetToSniff.info)
 
@@ -86,5 +86,5 @@ def display():
 # appelle de la fonction affichage et sniff qui à chaque fois qui a capture le
 # le paquet doit appelle la fonction p
 #-=======-===========-=================-============-==========-=============
-diplay()
-sniff(iface=interface, prn = sniffing)
+display()
+sniff(iface=interface, prn=sniffing)

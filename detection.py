@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#-*- coding: utf-8 -*-
 #-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-====-==-==-==-==
 #  author: Youndzo Francine && Yimnaing Crescence
 #  Objectif: Détecter si un client quelconque se trouve à proximité
@@ -12,10 +13,10 @@
 #
 #-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-====-==-==-==-==
 import sys
-from scapy.all import *
+from scapy.all import*
 
 #interface à sniffer
-interface="wlan0"
+interface="wlan0mon"
 
 listClients=[] #liste des clients sniffés
 listClientSsid=[] # liste des differents ssid des clients
@@ -23,12 +24,12 @@ listClientSsid=[] # liste des differents ssid des clients
 
 trameManager = (0,2,4)
 
-def sniffing(packet)
-	if len(sys.argv) != 2 #si le user à passer l'argument
+def sniffing(packet):
+	if len(sys.argv) != 2 : #si le user à passer l'argument
 		print" missing argument "
 		sys.exit(1)
 	if packet.haslayer(Dot11): # verifie si c'est un paquet wifi
-		if packet.type == 0 and subtype in trameManager:
+		if packet.type == 0 and packet.subtype in trameManager:
 			if packet.addr2 not in listClients:
 				print packet.addr2
 				listClients.append(packet.addr2) # ajout du client dans la liste s'il n'est pas present
